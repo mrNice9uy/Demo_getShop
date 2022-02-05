@@ -1,0 +1,84 @@
+.bgVideo {
+    background: #000;
+    position: fixed;
+    top: 0; right: 0; bottom: 0; left: 0;
+    z-index: -99;
+}
+
+.fgVideo,
+.bgVideo iframe {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    pointer-events: none;
+}
+
+.container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.sideBlock {
+    background-color: #86D3F4;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-left: auto;
+    height: 400px;
+    width: 250px;
+    opacity: 0;
+    transition: 1s;
+    animation: show 3s 1;
+    animation-fill-mode: forwards;
+    animation-delay: 5s;
+}
+
+@keyframes show {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.text {
+    margin-bottom: 0;
+    font-family: Roboto;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+}
+
+.qr {
+    margin: 0 auto;
+    width: 125px;
+}
+
+.qrText {
+    margin: 0 auto;
+    width: 126px;
+    font-family: Roboto;
+    font-size: 14px;
+    line-height: 16px;
+    align-items: center;
+    text-align: center;
+}
+
+.okButton {
+    margin: 0 auto 10px;
+    color: #fff;
+    background-color: black;
+    border: none;
+    width: 100px;
+    height: 40px;
+}
+
+@media (min-aspect-ratio: 16/9) {
+    .fgVideo { height: 300%; top: -100%; }
+}
+@media (max-aspect-ratio: 16/9) {
+    .fgVideo { width: 300%; left: -100%; }
+}

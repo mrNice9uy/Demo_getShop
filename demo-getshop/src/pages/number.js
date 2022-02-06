@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, useCallback } from "react";
 import { useNavigate } from "react-router-dom";
 import MaskedInput from "react-text-mask";
 
@@ -11,6 +11,17 @@ function Number() {
   const inputRef = useRef();
   let navigate = useNavigate();
 
+  const inputCheck = useCallback(
+    (inputRef) => {
+      if (number.length !== 10 && number.length !== 0) {
+        inputRef.current.inputElement.classList.add("inputPhoneInvalid");
+      } else {
+        inputRef.current.inputElement.classList.remove("inputPhoneInvalid");
+      }
+    },
+    [number.length]
+  );
+
   useEffect(() => {
     document.addEventListener(
       "keydown",
@@ -21,7 +32,8 @@ function Number() {
       },
       []
     );
-  }, [navigate, number]);
+    inputCheck(inputRef);
+  }, [navigate, number, inputCheck]);
 
   const handleClick = () => {
     navigate("/info");
@@ -36,15 +48,6 @@ function Number() {
     setKeyboard([...keyboard, event.charCode]);
     console.log(keyboard);
   };*/
-
-  const inputCheck = (inputRef, e) => {
-    debugger;
-    if (number.length !== 10 && number.length !== 0) {
-      inputRef.current.inputElement.classList.add("inputPhoneInvalid");
-    } else {
-      inputRef.current.inputElement.classList.remove("inputPhoneInvalid");
-    }
-  };
 
   const handleNumberChange = (e) => {
     let length = number.length;
@@ -135,6 +138,7 @@ function Number() {
             <button className="nums" onClick={handleNumberChange}>
               0
             </button>
+
             <div className="checkBlock span-3">
               <div className="check">
                 <input
@@ -150,20 +154,18 @@ function Number() {
                   </div>
                 </label>
               </div>
-              <button
-                className={
-                  number.length === 10 && checked === true
-                    ? "confirmEnable span-3"
-                    : "confirmDisable span-3"
-                }
-                disabled={
-                  number.length === 10 && checked === true ? false : true
-                }
-                onClick={handleClick}
-              >
-                Подтвердить номер
-              </button>
             </div>
+            <button
+              className={
+                number.length === 10 && checked === true
+                  ? "confirmEnable span-3"
+                  : "confirmDisable span-3"
+              }
+              disabled={number.length === 10 && checked === true ? false : true}
+              onClick={handleClick}
+            >
+              Подтвердить номер
+            </button>
           </div>
         </div>
         <main className="main">

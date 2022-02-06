@@ -1,0 +1,62 @@
+.container {
+    max-width: 1280px;
+    max-height: 720px;
+    margin: 0 auto;
+}
+
+.wrapper {
+    position: fixed;
+    margin: 0 auto;
+    right: 0;
+    top: 50px;
+    left: 250px;
+    width: 720px;
+    height: 600px;
+    z-index:99999999;     
+}
+
+h2 {
+    margin: 0;
+    padding: 0;
+    font-family: Roboto;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 37px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+p {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+}
+
+.mainInfo {
+    background-image: url(https://s3-alpha-sig.figma.com/img/ed60/0fa7/5801b7cb4ccd2f7293f8fc7e0ec6f4f1?Expires=1644796800&Signature=ffJ38aH-mL5ord5F1hOANq6yIY5wprw2uLCWwe6lEmK7VlHSdH-KzO2iN1zzRCwIoPXLDK7HiIRo0Rmf4MJFdaD4yS8Uy0wDRiVWOF29FuFs9Y8tzPJda1fIoclaGcXGN3~F75kWcq65nO73FyL0~5NTa5iMhhcvpPPjN1zcer0JM2BNvU9GgpLbb144dh3ExU~eQ--eZ5yFoJuguLdftTioVW7HmTARu0Q~FoNEzpvgb21~Q3Xn~BmtJ2g-Ms~5i~zvqlPQlJMRBC9vCBxrr9IFTgyd76YrsEcBV-Jgsmydho85BMagVBSmH9VHVvBng3HkOrzLwhQWxdoB~ddW1A__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA);
+    background-size: cover;
+    filter: blur(5px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 75%;
+    height: 100vh;
+    align-items: flex-end;
+}
+
+.toHome {
+    margin: 0 auto;
+    color: #fff;
+    background-color: #000;
+    border: 1px solid #4E4E4E;
+    font-family: Roboto;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    text-transform: uppercase;
+    height: 52px;
+    width: 280px;
+}

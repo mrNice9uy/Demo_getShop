@@ -20,6 +20,8 @@
 }
 
 .sideBlock {
+    position: absolute;
+    right: 0;
     background-color: #86D3F4;
     display: flex;
     flex-direction: column;

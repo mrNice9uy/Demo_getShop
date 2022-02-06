@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 import "../styles/home.css";
@@ -8,6 +8,18 @@ function Home() {
   const handleClick = () => {
     navigate("/number");
   };
+
+  useEffect(() => {
+    document.addEventListener(
+      "keydown",
+      function (e) {
+        if (e.key === "Enter") {
+          return navigate("/number");
+        }
+      },
+      []
+    );
+  }, [navigate]);
 
   return (
     <div className="container">

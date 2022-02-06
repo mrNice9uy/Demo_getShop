@@ -1,0 +1,241 @@
+.inputBlock {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;    
+    border:0;
+    margin: 0;
+    width: 25%;
+    height: 100vh;
+    background: #86D3F4;
+}
+
+.enterNumberText {
+    width: 272px;
+    height: 60px;
+    margin: 0 auto;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 26px;
+    line-height: 30px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.connectText {
+    margin: 25px auto 0;
+    font-family: Roboto;
+    font-size: 16px;
+    line-height: 16px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.inputPhone {
+    margin: 0 auto;
+    background: none;
+    border: none;
+    height: 38px;
+    width: 300px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 37px;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+}
+
+.inputPhoneInvalid {
+    margin: 0 auto;
+    background: none;
+    border: none;
+    color: red;
+    height: 38px;
+    width: 300px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 37px;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+}
+
+.inputPhone::placeholder {
+    color: #000;
+    letter-spacing: .2rem;
+}
+
+.keyboard {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: (3fr, 1fr);
+    border:0;
+    grid-gap: 1vw;
+    padding: 4em;
+}
+
+.nums {
+    margin: 0 auto;
+    background: none;
+    border: 2px solid black;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    padding: 0.3em;
+    width: 100%;
+    height: 52px;
+    text-align: center;
+}
+
+.nums:active {
+    color: #fff;
+    background-color: #000;
+}
+
+.backSpace:active {
+    color: #fff;
+    background-color: #000;
+}
+
+.backSpace {
+    background: none;
+    border: 2px solid black;
+}
+
+.confirmDisable {
+    margin: 0 auto;
+    background: none;
+    border: 1px solid #4E4E4E;
+    color: #4E4E4E;
+    font-family: Roboto;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    text-transform: uppercase;
+    height: 52px;
+    width: 100%;
+}
+
+.confirmEnable {
+    margin: 0 auto;
+    color: #fff;
+    background-color: #000;
+    border: 1px solid #4E4E4E;
+    font-family: Roboto;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    text-transform: uppercase;
+    height: 52px;
+    width: 100%;
+}
+
+.span-2{
+    grid-column: span 2;
+}
+
+.span-3{
+    grid-column: span 3;
+}
+
+.checkBlock {
+    width: 100%;
+    height: 52px;
+}
+
+input[type=checkbox] {
+    display: none;
+}
+
+input[type=checkbox] + label span {
+    border: 1px solid #000;
+    font-size: 24pt;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 0.25em;
+    margin: 4px 8px 8px 8px;
+    padding: 2px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 40px;
+}
+
+input[type=checkbox]:checked + label span::after {
+    content: "\2713";    
+    font-size: 36px;
+}
+
+label {
+    color: #565656;    
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    display: flex;
+    align-items: center;
+}
+
+.check {
+    margin: 0 auto;
+    height: 100px;
+}
+
+
+.main {
+    background-image: url(https://s3-alpha-sig.figma.com/img/ed60/0fa7/5801b7cb4ccd2f7293f8fc7e0ec6f4f1?Expires=1644796800&Signature=ffJ38aH-mL5ord5F1hOANq6yIY5wprw2uLCWwe6lEmK7VlHSdH-KzO2iN1zzRCwIoPXLDK7HiIRo0Rmf4MJFdaD4yS8Uy0wDRiVWOF29FuFs9Y8tzPJda1fIoclaGcXGN3~F75kWcq65nO73FyL0~5NTa5iMhhcvpPPjN1zcer0JM2BNvU9GgpLbb144dh3ExU~eQ--eZ5yFoJuguLdftTioVW7HmTARu0Q~FoNEzpvgb21~Q3Xn~BmtJ2g-Ms~5i~zvqlPQlJMRBC9vCBxrr9IFTgyd76YrsEcBV-Jgsmydho85BMagVBSmH9VHVvBng3HkOrzLwhQWxdoB~ddW1A__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 75%;
+    height: 100vh;
+    align-items: flex-end;
+}
+
+.xBtn {
+    font-size: 32px;
+    height: 52px;
+    width: 88px;
+    margin-right: 25px;
+    margin-top: 25px;
+}
+
+.qrBlock {
+    margin-left: auto;
+    margin-right: 25px;
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: space-between;
+    width: 320px;
+}
+
+.qrBlock__text {
+    color: #fff;
+    width: 194px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    display: flex;
+    align-items: center;
+    text-align: right;
+    text-transform: uppercase;
+}
+
+.qrBlock__img {
+    width: 110px;
+}

@@ -7,7 +7,6 @@ import "../styles/number.css";
 function Number() {
   const [checked, setChecked] = useState(false);
   const [number, setNumber] = useState("");
-  //const [keyboard, setKeyboard] = useState([]);
   const inputRef = useRef();
   let navigate = useNavigate();
 
@@ -42,12 +41,6 @@ function Number() {
   const handleChange = () => {
     setChecked(!checked);
   };
-
-  /*const keyPress = (event) => {
-    console.log(event);
-    setKeyboard([...keyboard, event.charCode]);
-    console.log(keyboard);
-  };*/
 
   const handleNumberChange = (e) => {
     let length = number.length;
